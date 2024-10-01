@@ -5,6 +5,11 @@ app.use(express.json());
 const mongoose = require('mongoose');
 require('dotenv').config();
 const Item = require('./models/Item');
+const cors = require('cors');
+
+app.use(cors({
+    origin: 'http://localhost:3000'  // Your React app origin
+  }));
 
 mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,

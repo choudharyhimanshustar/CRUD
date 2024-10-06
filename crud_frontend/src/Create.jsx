@@ -11,7 +11,7 @@ export default function Create() {
         navigate('/')
     }
     return (
-        <form onSubmit={(e) => handleClick(e)}>
+        <form onSubmit={(e) => handleClick(e)} className='form'>
             <input
                 value={formData.name}
                 onChange={(e) => 
